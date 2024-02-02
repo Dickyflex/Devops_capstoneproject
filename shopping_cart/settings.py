@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k+p0!wzw+labfgwuwd#4=)-)kkhb-*^=n5_%j=ppmc--(ki-zr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -77,8 +77,13 @@ WSGI_APPLICATION = 'shopping_cart.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'postgres',
+        'USER':'postgres',
+        'PASSWORD':'Snakedevil.,1234',
+        'HOST':'shoppingcart1.postgres.database.azure.com',
+        #'url':'jdbc:postgresql://shoppingcart.postgres.database.azure.com:5432/postgres',
+        'PORT':'5432',
     }
 }
 
